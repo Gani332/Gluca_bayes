@@ -1,0 +1,203 @@
+{
+  "generated_at": "2026-06-08T07:58:55.091715+00:00",
+  "protocol": {
+    "kind": "fresh_simglucose_uva_padova_correction_challenge",
+    "cohort": "adolescents",
+    "max_patients": 10,
+    "events_per_patient_target": 8,
+    "max_days": 35,
+    "seed": 20260608,
+    "threshold_mgdl": 215.0,
+    "stabilization_minutes": 120,
+    "response_minutes": 180,
+    "max_abs_counterfactual_drift": 40.0,
+    "clean_gate": {
+      "no_meals": true,
+      "no_exercise": true,
+      "no_other_boluses_in_response_window": true,
+      "dose_min_units": 0.5,
+      "response_minutes": 180,
+      "observed_net_isf_range": [
+        5.0,
+        200.0
+      ],
+      "chronological_split": "first 70% train, last 30% holdout per patient"
+    }
+  },
+  "isf_prediction_accuracy": {
+    "padova_correction_challenge": {
+      "n_patients_total": 10,
+      "n_patients_evaluated": 8,
+      "n_events_total": 64,
+      "n_holdout_events": 24,
+      "net_drop_target": {
+        "population": {
+          "baseline_mae": 35.1225,
+          "bayesian_mae": 3.3552,
+          "improvement_pct": 90.4472,
+          "paired_error_reduction": {
+            "mean": 31.7673,
+            "ci_low": 23.2855,
+            "ci_high": 40.5995,
+            "p_gt_0": 1.0
+          }
+        },
+        "clinical": {
+          "baseline_mae": 35.1225,
+          "bayesian_mae": 3.3552,
+          "improvement_pct": 90.4472,
+          "paired_error_reduction": {
+            "mean": 31.7673,
+            "ci_low": 23.2855,
+            "ci_high": 40.5995,
+            "p_gt_0": 1.0
+          }
+        },
+        "empirical": {
+          "baseline_mae": 3.7603,
+          "bayesian_mae": 3.3552,
+          "improvement_pct": 10.7741,
+          "paired_error_reduction": {
+            "mean": 0.4051,
+            "ci_low": -0.1314,
+            "ci_high": 1.0282,
+            "p_gt_0": 0.9208
+          }
+        }
+      },
+      "counterfactual_causal_target": {
+        "population": {
+          "baseline_mae": 56.2364,
+          "bayesian_mae": 25.3487,
+          "improvement_pct": 54.9248,
+          "paired_error_reduction": {
+            "mean": 30.8877,
+            "ci_low": 21.7102,
+            "ci_high": 40.4331,
+            "p_gt_0": 1.0
+          }
+        },
+        "clinical": {
+          "baseline_mae": 56.2364,
+          "bayesian_mae": 25.3487,
+          "improvement_pct": 54.9248,
+          "paired_error_reduction": {
+            "mean": 30.8877,
+            "ci_low": 21.7102,
+            "ci_high": 40.4331,
+            "p_gt_0": 1.0
+          }
+        },
+        "empirical": {
+          "baseline_mae": 25.3998,
+          "bayesian_mae": 25.3487,
+          "improvement_pct": 0.2012,
+          "paired_error_reduction": {
+            "mean": 0.0511,
+            "ci_low": -0.5327,
+            "ci_high": 0.754,
+            "p_gt_0": 0.5488
+          }
+        }
+      }
+    },
+    "personal": {
+      "status": "blocked",
+      "reason": "Supabase project dmiqajxvmwheqvznhfiw did not resolve via DNS from this environment; supabase projects list also returned Unauthorized. Need local export or authenticated DB access."
+    }
+  },
+  "ukf_signal_quality": {
+    "padova_correction_challenge": {
+      "raw_cgm_rmse": 11.6812,
+      "ukf_plasma_rmse": 14.2075,
+      "raw_cgm_mae": 8.5559,
+      "ukf_plasma_mae": 10.5,
+      "rmse_improvement_pct": -21.6276,
+      "innovation_mean": -0.0045,
+      "innovation_std": 4.7441,
+      "innovation_whiteness_pvalue": 0.0
+    },
+    "personal": {
+      "status": "blocked",
+      "reason": "Supabase project dmiqajxvmwheqvznhfiw did not resolve via DNS from this environment; supabase projects list also returned Unauthorized. Need local export or authenticated DB access."
+    }
+  },
+  "patient_exclusion_counts": {
+    "adolescent#001": {
+      "candidate_events": 8,
+      "low_starting_glucose": 0,
+      "counterfactual_drift": 0,
+      "nonphysiologic_observed_isf": 0,
+      "simulation_done": 0
+    },
+    "adolescent#002": {
+      "candidate_events": 8,
+      "low_starting_glucose": 0,
+      "counterfactual_drift": 0,
+      "nonphysiologic_observed_isf": 0,
+      "simulation_done": 0
+    },
+    "adolescent#003": {
+      "candidate_events": 8,
+      "low_starting_glucose": 0,
+      "counterfactual_drift": 0,
+      "nonphysiologic_observed_isf": 0,
+      "simulation_done": 0
+    },
+    "adolescent#004": {
+      "candidate_events": 8,
+      "low_starting_glucose": 0,
+      "counterfactual_drift": 0,
+      "nonphysiologic_observed_isf": 0,
+      "simulation_done": 0
+    },
+    "adolescent#005": {
+      "candidate_events": 8,
+      "low_starting_glucose": 0,
+      "counterfactual_drift": 0,
+      "nonphysiologic_observed_isf": 0,
+      "simulation_done": 0
+    },
+    "adolescent#006": {
+      "candidate_events": 80,
+      "low_starting_glucose": 0,
+      "counterfactual_drift": 80,
+      "nonphysiologic_observed_isf": 0,
+      "simulation_done": 0
+    },
+    "adolescent#007": {
+      "candidate_events": 8,
+      "low_starting_glucose": 0,
+      "counterfactual_drift": 0,
+      "nonphysiologic_observed_isf": 0,
+      "simulation_done": 0
+    },
+    "adolescent#008": {
+      "candidate_events": 8,
+      "low_starting_glucose": 0,
+      "counterfactual_drift": 0,
+      "nonphysiologic_observed_isf": 0,
+      "simulation_done": 0
+    },
+    "adolescent#009": {
+      "candidate_events": 73,
+      "low_starting_glucose": 0,
+      "counterfactual_drift": 73,
+      "nonphysiologic_observed_isf": 0,
+      "simulation_done": 0
+    },
+    "adolescent#010": {
+      "candidate_events": 8,
+      "low_starting_glucose": 0,
+      "counterfactual_drift": 0,
+      "nonphysiologic_observed_isf": 0,
+      "simulation_done": 0
+    }
+  },
+  "artifacts": {
+    "events_csv": "padova_clean_correction_events.csv",
+    "holdout_predictions_csv": "padova_holdout_predictions.csv",
+    "patient_summary_csv": "padova_patient_summary.csv",
+    "report_md": "real_validation_report.md"
+  }
+}

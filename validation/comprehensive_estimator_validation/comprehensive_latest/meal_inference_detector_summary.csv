@@ -1,0 +1,6 @@
+detector,traces,days,evaluated_meals,true_positives,false_positives,precision,recall,f1,false_prompts_per_day,median_detection_delay_min,carb_bin_accuracy
+bolus_only,3,42.0,129,103,1,0.9904,0.7984,0.8841,0.0238,50.9414,1.0
+gluca_contextual_meal,3,42.0,129,103,1,0.9904,0.7984,0.8841,0.0238,50.9414,1.0
+gluca_latent_meal,3,42.0,129,10,1,0.9091,0.0775,0.1429,0.0238,76.3159,0.7222
+rate_threshold,3,42.0,129,15,56,0.2113,0.1163,0.15,1.3333,25.8206,0.273
+schedule_prior,3,42.0,129,107,19,0.8492,0.8295,0.8392,0.4524,61.8267,0.7013

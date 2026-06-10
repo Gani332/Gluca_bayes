@@ -1,0 +1,5 @@
+estimator,n,mae_hours
+carb_size_oracle_for_synthetic,130,0.0
+fixed_3h,130,1.2795
+modular_curve_history,127,0.7495
+observed_curve,82,1.5138

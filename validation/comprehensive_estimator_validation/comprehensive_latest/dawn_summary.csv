@@ -1,0 +1,7 @@
+estimator,n,mae_mgdl
+empirical_mean,33,10.416
+empirical_median,33,7.6788
+fixed_population_18,33,14.8667
+gluca_adaptive_trust,33,6.7394
+gluca_modular_trust,33,10.2346
+no_dawn,33,6.1939

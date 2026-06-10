@@ -1,0 +1,69 @@
+task,scope,estimator,metric,value,lower_is_better,n,baseline_reference,improvement_vs_fixed_pct,improvement_vs_empirical_mean_pct,ground_truth,improvement_vs_population_pct
+isf_correction_response,adolescents,app_style_log_posterior,net_drop_mae_mgdl,3.7226,True,24,fixed_population_50,89.4011,1.0026,future Padova clean-correction net glucose drop,
+isf_correction_response,adolescents,clinical_prior,net_drop_mae_mgdl,35.1225,True,24,fixed_population_50,0.0,-834.0345,future Padova clean-correction net glucose drop,
+isf_correction_response,adolescents,empirical_mean,net_drop_mae_mgdl,3.7603,True,24,fixed_population_50,89.2938,0.0,future Padova clean-correction net glucose drop,
+isf_correction_response,adolescents,empirical_median,net_drop_mae_mgdl,3.1845,True,24,fixed_population_50,90.9332,15.3126,future Padova clean-correction net glucose drop,
+isf_correction_response,adolescents,empirical_trimmed_mean,net_drop_mae_mgdl,3.1058,True,24,fixed_population_50,91.1572,17.4055,future Padova clean-correction net glucose drop,
+isf_correction_response,adolescents,ewma_alpha_0_35,net_drop_mae_mgdl,5.8158,True,24,fixed_population_50,83.4414,-54.6632,future Padova clean-correction net glucose drop,
+isf_correction_response,adolescents,fixed_population_50,net_drop_mae_mgdl,35.1225,True,24,fixed_population_50,0.0,-834.0345,future Padova clean-correction net glucose drop,
+isf_correction_response,adolescents,gluca_adaptive_trust,net_drop_mae_mgdl,3.5562,True,24,fixed_population_50,89.8749,5.4278,future Padova clean-correction net glucose drop,
+isf_correction_response,adolescents,gluca_modular_trust,net_drop_mae_mgdl,3.0907,True,24,fixed_population_50,91.2002,17.8071,future Padova clean-correction net glucose drop,
+isf_correction_response,adolescents,gluca_v2_clean_gate,net_drop_mae_mgdl,4.8096,True,24,fixed_population_50,86.3062,-27.9047,future Padova clean-correction net glucose drop,
+isf_correction_response,adolescents,original_bayes_v1,net_drop_mae_mgdl,3.3552,True,24,fixed_population_50,90.4471,10.7731,future Padova clean-correction net glucose drop,
+isf_correction_response,adolescents,recent_3_mean,net_drop_mae_mgdl,3.1711,True,24,fixed_population_50,90.9713,15.669,future Padova clean-correction net glucose drop,
+isf_correction_response,adolescents,robust_huber_center,net_drop_mae_mgdl,3.2955,True,24,fixed_population_50,90.6171,12.3607,future Padova clean-correction net glucose drop,
+isf_correction_response,adolescents,robust_winsorized_mean,net_drop_mae_mgdl,3.0907,True,24,fixed_population_50,91.2002,17.8071,future Padova clean-correction net glucose drop,
+isf_correction_response,adults,app_style_log_posterior,net_drop_mae_mgdl,5.5501,True,27,fixed_population_50,90.4245,-2.2363,future Padova clean-correction net glucose drop,
+isf_correction_response,adults,clinical_prior,net_drop_mae_mgdl,38.064,True,27,fixed_population_50,34.3289,-601.1623,future Padova clean-correction net glucose drop,
+isf_correction_response,adults,empirical_mean,net_drop_mae_mgdl,5.4287,True,27,fixed_population_50,90.634,0.0,future Padova clean-correction net glucose drop,
+isf_correction_response,adults,empirical_median,net_drop_mae_mgdl,5.042,True,27,fixed_population_50,91.3011,7.1233,future Padova clean-correction net glucose drop,
+isf_correction_response,adults,empirical_trimmed_mean,net_drop_mae_mgdl,5.1085,True,27,fixed_population_50,91.1864,5.8983,future Padova clean-correction net glucose drop,
+isf_correction_response,adults,ewma_alpha_0_35,net_drop_mae_mgdl,9.4419,True,27,fixed_population_50,83.7101,-73.9256,future Padova clean-correction net glucose drop,
+isf_correction_response,adults,fixed_population_50,net_drop_mae_mgdl,57.9616,True,27,fixed_population_50,0.0,-967.6884,future Padova clean-correction net glucose drop,
+isf_correction_response,adults,gluca_adaptive_trust,net_drop_mae_mgdl,5.2263,True,27,fixed_population_50,90.9832,3.7283,future Padova clean-correction net glucose drop,
+isf_correction_response,adults,gluca_modular_trust,net_drop_mae_mgdl,4.9904,True,27,fixed_population_50,91.3902,8.0738,future Padova clean-correction net glucose drop,
+isf_correction_response,adults,gluca_v2_clean_gate,net_drop_mae_mgdl,7.1775,True,27,fixed_population_50,87.6168,-32.214,future Padova clean-correction net glucose drop,
+isf_correction_response,adults,original_bayes_v1,net_drop_mae_mgdl,5.8309,True,27,fixed_population_50,89.9401,-7.4088,future Padova clean-correction net glucose drop,
+isf_correction_response,adults,recent_3_mean,net_drop_mae_mgdl,5.1258,True,27,fixed_population_50,91.1566,5.5796,future Padova clean-correction net glucose drop,
+isf_correction_response,adults,robust_huber_center,net_drop_mae_mgdl,4.9427,True,27,fixed_population_50,91.4725,8.9524,future Padova clean-correction net glucose drop,
+isf_correction_response,adults,robust_winsorized_mean,net_drop_mae_mgdl,5.1236,True,27,fixed_population_50,91.1604,5.6201,future Padova clean-correction net glucose drop,
+rl4bg_isf_recovery,adolescents,app_style_log_posterior_from_clean_obs,median_abs_pct_error,24.9237,True,30,population_prior,,,RL4BG known therapy profile parameter,7.4772
+rl4bg_isf_recovery,adolescents,gluca_adaptive_trust,median_abs_pct_error,27.1133,True,30,population_prior,,,RL4BG known therapy profile parameter,-0.6511
+rl4bg_isf_recovery,adolescents,gluca_modular_trust,median_abs_pct_error,27.1133,True,30,population_prior,,,RL4BG known therapy profile parameter,-0.6511
+rl4bg_isf_recovery,adolescents,gluca_v2_clean_gate,median_abs_pct_error,27.1133,True,30,population_prior,,,RL4BG known therapy profile parameter,-0.6511
+rl4bg_isf_recovery,adolescents,normal_bayes_from_v2_obs,median_abs_pct_error,23.7162,True,30,population_prior,,,RL4BG known therapy profile parameter,11.9597
+rl4bg_isf_recovery,adolescents,original_bayes_v1,median_abs_pct_error,32.5833,True,30,population_prior,,,RL4BG known therapy profile parameter,-20.9571
+rl4bg_isf_recovery,adolescents,population_prior,median_abs_pct_error,26.9379,True,30,population_prior,,,RL4BG known therapy profile parameter,0.0
+rl4bg_isf_recovery,adolescents,v1_observation_mean,median_abs_pct_error,38.5741,True,30,population_prior,,,RL4BG known therapy profile parameter,-43.1964
+rl4bg_isf_recovery,adolescents,v1_observation_median,median_abs_pct_error,39.3432,True,30,population_prior,,,RL4BG known therapy profile parameter,-46.0515
+rl4bg_isf_recovery,adolescents,v2_observation_mean,median_abs_pct_error,30.3347,True,30,population_prior,,,RL4BG known therapy profile parameter,-12.6097
+rl4bg_cr_recovery,adolescents,app_style_log_posterior_from_clean_obs,median_abs_pct_error,22.2453,True,30,population_prior,,,RL4BG known therapy profile parameter,20.9303
+rl4bg_cr_recovery,adolescents,gluca_adaptive_trust,median_abs_pct_error,18.4364,True,30,population_prior,,,RL4BG known therapy profile parameter,34.4689
+rl4bg_cr_recovery,adolescents,gluca_modular_trust,median_abs_pct_error,20.1519,True,30,population_prior,,,RL4BG known therapy profile parameter,28.3712
+rl4bg_cr_recovery,adolescents,gluca_v2_clean_gate,median_abs_pct_error,20.7606,True,30,population_prior,,,RL4BG known therapy profile parameter,26.2076
+rl4bg_cr_recovery,adolescents,normal_bayes_from_v2_obs,median_abs_pct_error,23.1983,True,30,population_prior,,,RL4BG known therapy profile parameter,17.543
+rl4bg_cr_recovery,adolescents,original_bayes_v1,median_abs_pct_error,22.2948,True,30,population_prior,,,RL4BG known therapy profile parameter,20.7544
+rl4bg_cr_recovery,adolescents,population_prior,median_abs_pct_error,28.1338,True,30,population_prior,,,RL4BG known therapy profile parameter,0.0
+rl4bg_cr_recovery,adolescents,v1_observation_mean,median_abs_pct_error,34.0181,True,30,population_prior,,,RL4BG known therapy profile parameter,-20.9154
+rl4bg_cr_recovery,adolescents,v1_observation_median,median_abs_pct_error,36.4821,True,30,population_prior,,,RL4BG known therapy profile parameter,-29.6736
+rl4bg_cr_recovery,adolescents,v2_observation_mean,median_abs_pct_error,24.3606,True,30,population_prior,,,RL4BG known therapy profile parameter,13.4116
+rl4bg_basal_recovery,adolescents,app_style_log_posterior_from_clean_obs,median_abs_pct_error,4.7833,True,30,population_prior,,,RL4BG known therapy profile parameter,82.8663
+rl4bg_basal_recovery,adolescents,gluca_adaptive_trust,median_abs_pct_error,4.8244,True,30,population_prior,,,RL4BG known therapy profile parameter,82.7191
+rl4bg_basal_recovery,adolescents,gluca_modular_trust,median_abs_pct_error,3.6535,True,30,population_prior,,,RL4BG known therapy profile parameter,86.9132
+rl4bg_basal_recovery,adolescents,gluca_v2_clean_gate,median_abs_pct_error,3.6546,True,30,population_prior,,,RL4BG known therapy profile parameter,86.9093
+rl4bg_basal_recovery,adolescents,normal_bayes_from_v2_obs,median_abs_pct_error,4.4613,True,30,population_prior,,,RL4BG known therapy profile parameter,84.0197
+rl4bg_basal_recovery,adolescents,original_bayes_v1,median_abs_pct_error,11.5054,True,30,population_prior,,,RL4BG known therapy profile parameter,58.7879
+rl4bg_basal_recovery,adolescents,population_prior,median_abs_pct_error,27.9175,True,30,population_prior,,,RL4BG known therapy profile parameter,0.0
+rl4bg_basal_recovery,adolescents,v1_observation_mean,median_abs_pct_error,11.4633,True,30,population_prior,,,RL4BG known therapy profile parameter,58.9387
+rl4bg_basal_recovery,adolescents,v1_observation_median,median_abs_pct_error,7.7111,True,30,population_prior,,,RL4BG known therapy profile parameter,72.379
+rl4bg_basal_recovery,adolescents,v2_observation_mean,median_abs_pct_error,4.3371,True,30,population_prior,,,RL4BG known therapy profile parameter,84.4646
+rl4bg_overall_parameter_recovery,adolescents,app_style_log_posterior_from_clean_obs,median_abs_pct_error,17.2413,True,30,population_prior,,,RL4BG known therapy profile parameter,28.4234
+rl4bg_overall_parameter_recovery,adolescents,gluca_adaptive_trust,median_abs_pct_error,16.3542,True,30,population_prior,,,RL4BG known therapy profile parameter,32.1062
+rl4bg_overall_parameter_recovery,adolescents,gluca_modular_trust,median_abs_pct_error,16.0215,True,30,population_prior,,,RL4BG known therapy profile parameter,33.4874
+rl4bg_overall_parameter_recovery,adolescents,gluca_v2_clean_gate,median_abs_pct_error,16.6769,True,30,population_prior,,,RL4BG known therapy profile parameter,30.7665
+rl4bg_overall_parameter_recovery,adolescents,normal_bayes_from_v2_obs,median_abs_pct_error,17.0259,True,30,population_prior,,,RL4BG known therapy profile parameter,29.3176
+rl4bg_overall_parameter_recovery,adolescents,original_bayes_v1,median_abs_pct_error,21.3762,True,30,population_prior,,,RL4BG known therapy profile parameter,11.2575
+rl4bg_overall_parameter_recovery,adolescents,population_prior,median_abs_pct_error,24.0879,True,30,population_prior,,,RL4BG known therapy profile parameter,0.0
+rl4bg_overall_parameter_recovery,adolescents,v1_observation_mean,median_abs_pct_error,30.1862,True,30,population_prior,,,RL4BG known therapy profile parameter,-25.3169
+rl4bg_overall_parameter_recovery,adolescents,v1_observation_median,median_abs_pct_error,27.5235,True,30,population_prior,,,RL4BG known therapy profile parameter,-14.2628
+rl4bg_overall_parameter_recovery,adolescents,v2_observation_mean,median_abs_pct_error,19.6328,True,30,population_prior,,,RL4BG known therapy profile parameter,18.4952

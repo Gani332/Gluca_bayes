@@ -1,0 +1,9 @@
+domain,metric,gluca_value,baseline,baseline_value,gluca_improvement_vs_baseline_pct,comparison_supported,value_add_supported
+ISF correction response (adolescents),net drop MAE mg/dL,3.0907,clinical_prior,35.1225,91.2002,True,True
+ISF correction response (adults),net drop MAE mg/dL,4.9904,clinical_prior,38.064,86.8894,True,True
+CR recovery,median abs pct error,20.1519,configured_profile_proxy,28.1338,28.3712,True,True
+Basal recovery,median abs pct error,3.6535,configured_profile_proxy,27.9175,86.9132,True,True
+Overall parameter recovery,median abs pct error,16.0215,configured_profile_proxy,24.0879,33.4874,True,True
+Meal inference,event F1,0.8841,bolus_context_only,0.8841,0.0,True,False
+Carb absorption timing,MAE hours,0.7495,fixed_3h,1.2795,41.4184,True,True
+Dawn/morning rise prediction,MAE mg/dL,6.7394,no_explicit_dawn_personalization,6.1939,-8.8063,False,False
