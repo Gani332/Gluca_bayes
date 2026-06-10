@@ -48,6 +48,29 @@ Strong-baseline sanity check:
 validation/comprehensive_estimator_validation/comprehensive_latest/strong_baseline_claim_rows.csv
 ```
 
+## Locked Tuning Sanity Check
+
+I also ran a stricter tuning check where estimator hyperparameters are selected on development patients only, then evaluated once on locked-test patients.
+
+Output:
+
+```text
+validation/locked_estimator_tuning/locked_isf_latest/locked_isf_tuning_result.json
+```
+
+Result:
+
+| Locked-test comparison | Result |
+|---|---:|
+| Tuned Gluca ISF MAE | 1.93 mg/dL |
+| Clinical/profile proxy MAE | 34.44 mg/dL |
+| Best strong personalised baseline | empirical median |
+| Best strong baseline MAE | 1.85 mg/dL |
+| Improvement vs profile proxy | 94.40% |
+| Improvement vs best strong baseline | -4.08% |
+
+Interpretation: tuning improves strongly over the profile proxy, but does not beat the best robust personalised baseline on locked-test patients. This is why the claim stays focused on configured-profile proxies and explainable personalisation, not superiority over all personalised estimators or current commercial pump systems.
+
 ## What Is Being Compared
 
 The baseline is not the private controller inside a commercial pump. Those algorithms are proprietary and are not reimplemented here.

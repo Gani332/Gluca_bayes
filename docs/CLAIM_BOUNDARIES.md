@@ -19,6 +19,7 @@ This repo supports a narrow, evidence-backed claim:
 - Replacement of a closed-loop controller.
 - Direct dosing use.
 - Value-add over every robust personalised estimator.
+- Tuned ISF superiority over the best robust personalised baseline on locked-test patients.
 - Meal inference superiority over bolus-context detection.
 - Dawn/morning-rise prediction.
 

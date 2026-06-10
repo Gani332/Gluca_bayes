@@ -1,0 +1,48 @@
+{
+  "protocol": "Tune on development patients only; evaluate once on locked-test patients.",
+  "dev_patients": [
+    "adolescents/adolescent#001",
+    "adolescents/adolescent#002",
+    "adolescents/adolescent#003",
+    "adolescents/adolescent#004",
+    "adolescents/adolescent#005",
+    "adults/adult#001",
+    "adults/adult#002",
+    "adults/adult#004",
+    "adults/adult#005",
+    "adults/adult#006",
+    "adults/adult#007"
+  ],
+  "locked_test_patients": [
+    "adolescents/adolescent#007",
+    "adolescents/adolescent#008",
+    "adolescents/adolescent#010",
+    "adults/adult#008",
+    "adults/adult#009",
+    "adults/adult#010"
+  ],
+  "selected_candidate": {
+    "family": "modular",
+    "min_observations": 2,
+    "data_dominance_observations": 3,
+    "outlier_iqr_threshold": 0.1,
+    "name": "gluca_tuned_modular_min2_dom3_iqr0.1",
+    "dev_net_mae": 5.2796
+  },
+  "locked_test": {
+    "tuned_net_mae": 1.9272,
+    "clinical_profile_proxy_mae": 34.4433,
+    "best_strong_baseline": "empirical_median",
+    "best_strong_baseline_mae": 1.8517,
+    "improvement_vs_profile_proxy_pct": 94.4048,
+    "improvement_vs_best_strong_baseline_pct": -4.0784,
+    "beats_profile_proxy": true,
+    "beats_best_strong_baseline": false
+  },
+  "interpretation": {
+    "can_claim_beats_profile_proxy": true,
+    "can_claim_beats_robust_personalized_baseline": false,
+    "can_claim_beats_current_pumps": false,
+    "why_not_current_pumps": "This is ISF estimator validation against profile/proxy and statistical baselines, not a closed-loop commercial pump controller trial."
+  }
+}
