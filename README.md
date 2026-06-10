@@ -71,6 +71,27 @@ Result:
 
 Interpretation: tuning improves strongly over the profile proxy, but does not beat the best robust personalised baseline on locked-test patients. This is why the claim stays focused on configured-profile proxies and explainable personalisation, not superiority over all personalised estimators or current commercial pump systems.
 
+## Messy-Data Contribution Check
+
+The clean ISF task is almost too clean: once the event is isolated, robust averaging is hard to beat. The more realistic test is messy free-living replay, where meals, boluses, basal delivery and CGM are mixed.
+
+Output:
+
+```text
+validation/messy_data_validation/messy_latest/messy_data_contribution_report.md
+```
+
+Main result on RL4BG messy replay:
+
+| Estimator | Overall mean absolute % error | Overall median absolute % error |
+|---|---:|---:|
+| Messy empirical mean | 38.58% | 30.19% |
+| Clean-gated empirical mean | 19.79% | 19.63% |
+| Clean-gated normal Bayes | 17.86% | 17.03% |
+| Gluca Bayesian/trust | 16.89% | 16.02% |
+
+Interpretation: the genuine contribution is the full personalisation stack, not Bayes as a magic word. Clean event selection cuts error sharply, and Gluca's Bayesian/trust layer adds a further overall improvement versus clean-gated averaging in this messy replay.
+
 ## What Is Being Compared
 
 The baseline is not the private controller inside a commercial pump. Those algorithms are proprietary and are not reimplemented here.

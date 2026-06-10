@@ -1,0 +1,21 @@
+estimator,label,metric,parameter,n_runs,mean_abs_pct_error,median_abs_pct_error,q1_abs_pct_error,q3_abs_pct_error
+population_prior,Population/profile prior,isf_abs_pct_error,ISF,30,29.0608,26.9379,5.5424,37.7258
+population_prior,Population/profile prior,cr_abs_pct_error,CR,30,28.9425,28.1338,24.0621,33.653
+population_prior,Population/profile prior,basal_abs_pct_error,Basal,30,35.0042,27.9174,14.4648,54.3693
+population_prior,Population/profile prior,mean_abs_pct_error,Overall,30,31.0025,24.0878,17.5984,46.1809
+v1_observation_mean,Messy empirical mean,isf_abs_pct_error,ISF,30,69.6017,38.5741,17.8063,113.0445
+v1_observation_mean,Messy empirical mean,cr_abs_pct_error,CR,30,34.1511,34.0182,31.0791,38.6545
+v1_observation_mean,Messy empirical mean,basal_abs_pct_error,Basal,30,11.9827,11.4633,6.686,15.8987
+v1_observation_mean,Messy empirical mean,mean_abs_pct_error,Overall,30,38.5785,30.1862,22.29,56.1513
+v2_observation_mean,Clean-gated empirical mean,isf_abs_pct_error,ISF,30,31.8814,30.3346,9.6611,38.7986
+v2_observation_mean,Clean-gated empirical mean,cr_abs_pct_error,CR,30,23.1993,24.3606,8.0716,34.6117
+v2_observation_mean,Clean-gated empirical mean,basal_abs_pct_error,Basal,30,4.2798,4.337,2.0273,5.817
+v2_observation_mean,Clean-gated empirical mean,mean_abs_pct_error,Overall,30,19.7868,19.6328,10.7094,28.7622
+normal_bayes_from_v2_obs,Clean-gated normal Bayes,isf_abs_pct_error,ISF,30,28.1791,23.7162,8.0607,36.5734
+normal_bayes_from_v2_obs,Clean-gated normal Bayes,cr_abs_pct_error,CR,30,21.1127,23.1983,7.7393,33.0903
+normal_bayes_from_v2_obs,Clean-gated normal Bayes,basal_abs_pct_error,Basal,30,4.2891,4.4613,2.045,5.9502
+normal_bayes_from_v2_obs,Clean-gated normal Bayes,mean_abs_pct_error,Overall,30,17.8603,17.0259,11.0514,25.2676
+gluca_modular_trust,Gluca Bayesian/trust,isf_abs_pct_error,ISF,30,27.7668,27.1133,6.2894,38.5373
+gluca_modular_trust,Gluca Bayesian/trust,cr_abs_pct_error,CR,30,18.7632,20.1519,3.3791,27.5687
+gluca_modular_trust,Gluca Bayesian/trust,basal_abs_pct_error,Basal,30,4.1475,3.6534,2.0807,5.7611
+gluca_modular_trust,Gluca Bayesian/trust,mean_abs_pct_error,Overall,30,16.8925,16.0215,10.8769,23.2869

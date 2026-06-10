@@ -11,6 +11,7 @@ This repo supports a narrow, evidence-backed claim:
 - Basal recovery improves versus configured-profile proxy baselines.
 - Overall parameter recovery improves versus configured-profile proxy baselines.
 - Carb absorption timing improves versus a fixed 3-hour assumption.
+- In messy RL4BG free-living replay, the full Gluca stack beats naive empirical averaging and improves overall parameter recovery versus clean-gated empirical averaging.
 - The method is explainable: posterior mean, posterior width, confidence, and event gating are inspectable.
 
 ## Not Supported
@@ -20,6 +21,7 @@ This repo supports a narrow, evidence-backed claim:
 - Direct dosing use.
 - Value-add over every robust personalised estimator.
 - Tuned ISF superiority over the best robust personalised baseline on locked-test patients.
+- The claim that Bayesian updating alone is always better than empirical averaging.
 - Meal inference superiority over bolus-context detection.
 - Dawn/morning-rise prediction.
 
