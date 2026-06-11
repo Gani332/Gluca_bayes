@@ -19,6 +19,12 @@ Outputs:
 - `messy_latest/messy_data_contribution_result.json`
 - `messy_latest/messy_data_contribution_report.md`
 - `messy_latest/messy_data_contribution.png`
+- `messy_latest/01_messy_value_add.png`
+- `messy_latest/02_messy_parameter_recovery.png`
+- `messy_latest/03_messy_stack_decomposition.png`
+- `messy_latest/04_messy_paired_improvement.png`
+- `messy_latest/05_messy_run_distribution.png`
+- `messy_latest/06_messy_observation_sanity.png`
 
 Claim boundary:
 

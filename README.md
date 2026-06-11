@@ -2,7 +2,7 @@
 
 Evidence repo for Gluca's Bayesian parameter-personalisation validation.
 
-This repository contains the estimator code, validation scripts, CSV outputs, and blog-ready plots used to support the Gluca blog post. The short version: in simulator/offline validation, the Bayesian/trust-gated personalisation layer improves several therapy-parameter estimates versus pump-style configured-profile proxies.
+This repository contains the estimator code, validation scripts, CSV outputs, and blog-ready plots used to support the Gluca blog post. The short version: in messy simulator/offline replay, the gated Bayesian/trust personalisation layer improves overall therapy-parameter recovery versus naive empirical averaging and clean-gated averaging.
 
 This is research code. It is not a medical device, not clinical proof, and must not be used to make insulin dosing decisions.
 
@@ -10,7 +10,7 @@ This is research code. It is not a medical device, not clinical proof, and must 
 
 Supported claim:
 
-> In simulator/offline validation with chronological splits and known ground truth where available, Gluca's Bayesian/trust-gated personalisation improves several therapy-parameter and event-state estimates versus pump-style configured-profile proxies.
+> In messy simulator/offline replay with known ground truth, Gluca's clean event selection plus Bayesian/trust personalisation improves overall ISF, carb ratio, and basal parameter recovery versus naive empirical averaging and clean-gated empirical averaging.
 
 Do not claim:
 
@@ -18,34 +18,33 @@ Do not claim:
 - Gluca replaces a closed-loop controller.
 - Gluca should be used for dosing.
 - Gluca beats every robust personalised estimator in every subgroup.
+- Bayesian posterior means alone always beat robust personalised averaging.
 - Meal inference is a clear value-add yet.
 - Dawn/morning-rise prediction is solved.
 
 ## Headline Results
 
-Lower is better for MAE/error rows. Higher is better for F1.
+Lower is better.
 
-| Domain | Gluca | Pump-style baseline | Improvement | Value-add? |
-|---|---:|---:|---:|---|
-| ISF correction response, adolescents | 3.09 mg/dL MAE | 35.12 mg/dL MAE | 91.20% | yes |
-| ISF correction response, adults | 4.99 mg/dL MAE | 38.06 mg/dL MAE | 86.89% | yes |
-| Carb ratio recovery | 20.15% error | 28.13% error | 28.37% | yes |
-| Basal recovery | 3.65% error | 27.92% error | 86.91% | yes |
-| Overall parameter recovery | 16.02% error | 24.09% error | 33.49% | yes |
-| Meal inference | 0.884 F1 | 0.884 F1 | 0.00% | parity only |
-| Carb absorption timing | 0.75 h MAE | 1.28 h MAE | 41.42% | yes |
-| Dawn/morning rise | 6.74 mg/dL MAE | 6.19 mg/dL MAE | -8.81% | no |
+| Estimator | Overall mean absolute % error | Overall median absolute % error |
+|---|---:|---:|
+| Messy empirical mean | 38.58% | 30.19% |
+| Clean-gated empirical mean | 19.79% | 19.63% |
+| Clean-gated normal Bayes | 17.86% | 17.03% |
+| Gluca Bayesian/trust | 16.89% | 16.02% |
 
-Primary CSV:
+Primary outputs:
 
 ```text
-validation/comprehensive_estimator_validation/comprehensive_latest/pump_proxy_claim_rows.csv
+validation/messy_data_validation/messy_latest/messy_data_contribution_report.md
+validation/messy_data_validation/messy_latest/messy_data_aggregate.csv
+validation/messy_data_validation/messy_latest/messy_data_comparisons.csv
 ```
 
-Strong-baseline sanity check:
+Older configured-profile proxy outputs are still included for transparency under:
 
 ```text
-validation/comprehensive_estimator_validation/comprehensive_latest/strong_baseline_claim_rows.csv
+validation/comprehensive_estimator_validation/comprehensive_latest/
 ```
 
 ## Locked Tuning Sanity Check
@@ -125,20 +124,20 @@ validation/comprehensive_estimator_validation/
 
 ## Blog-Ready Plots
 
-Plots used by the article are in:
+The current blog-ready messy-validation plots are in:
 
 ```text
-validation/comprehensive_estimator_validation/comprehensive_latest/plots/
+validation/messy_data_validation/messy_latest/
 ```
 
 Recommended order:
 
-1. `01_pump_proxy_value_add.png`
-2. `03_parameter_recovery_vs_profile_proxy.png`
-3. `02_isf_clean_correction_mae.png`
-4. `04_paired_error_reduction_forest.png`
-5. `05_absorption_and_meal_inference.png`
-6. `06_strong_sanity_baselines.png`
+1. `01_messy_value_add.png`
+2. `02_messy_parameter_recovery.png`
+3. `03_messy_stack_decomposition.png`
+4. `04_messy_paired_improvement.png`
+5. `05_messy_run_distribution.png`
+6. `06_messy_observation_sanity.png`
 
 ## Reproduce
 
@@ -181,6 +180,12 @@ python validation/comprehensive_estimator_validation/run_significance_checks.py
 python validation/comprehensive_estimator_validation/make_blog_plots.py
 ```
 
+Regenerate the messy-data validation and current blog plots:
+
+```bash
+python validation/messy_data_validation/run_messy_data_contribution.py
+```
+
 The full estimator benchmark without `--skip-rl4bg` uses the public `MLD3/RL4BG` repository. The helper script will clone it to `/tmp/RL4BG` if it is not already present.
 
 ## Important Caveats
@@ -189,6 +194,7 @@ The full estimator benchmark without `--skip-rl4bg` uses the public `MLD3/RL4BG`
 - Chronological splits are used where holdout evaluation is needed.
 - Ground truth is used where the simulator exposes it.
 - Pump baselines are public-behaviour/configured-profile proxies, not proprietary controller clones.
+- The strongest current blog claim is messy estimator validation, not commercial pump superiority.
 - Meal inference currently matches the bolus-context baseline rather than beating it.
 - Dawn/morning-rise prediction is currently unsupported.
 - Strong robust personalised baselines remain important sanity checks.
@@ -204,6 +210,10 @@ The full estimator benchmark without `--skip-rl4bg` uses the public `MLD3/RL4BG`
 - `validation/comprehensive_estimator_validation/comprehensive_latest/meal_inference_detector_summary.csv`
 - `validation/comprehensive_estimator_validation/comprehensive_latest/carb_absorption_summary.csv`
 - `validation/comprehensive_estimator_validation/comprehensive_latest/dawn_summary.csv`
+- `validation/messy_data_validation/messy_latest/messy_data_contribution_report.md`
+- `validation/messy_data_validation/messy_latest/messy_data_aggregate.csv`
+- `validation/messy_data_validation/messy_latest/messy_data_comparisons.csv`
+- `validation/messy_data_validation/messy_latest/messy_data_contribution_result.json`
 
 ## Contributing
 
