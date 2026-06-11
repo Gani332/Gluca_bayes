@@ -408,10 +408,14 @@ def make_plots(outdir: Path, aggregate: list[dict[str, Any]], comparisons: list[
     ax.set_yticklabels(params)
     ax.set_xlabel("Mean error improvement (%)")
     ax.set_title("Paired improvement across the same 30 replay runs")
+    ax.set_xlim(0, 72)
     ax.spines[["top", "right"]].set_visible(False)
     ax.grid(axis="x", alpha=0.22)
-    ax.legend(frameon=False, fontsize=9, loc="lower right")
-    finish(fig, outdir / "04_messy_paired_improvement.png")
+    handles, legend_labels = ax.get_legend_handles_labels()
+    fig.legend(handles, legend_labels, frameon=False, fontsize=9, loc="lower center", ncols=3, bbox_to_anchor=(0.5, 0.02))
+    fig.tight_layout(rect=(0, 0.13, 1, 1))
+    fig.savefig(outdir / "04_messy_paired_improvement.png", dpi=180)
+    plt.close(fig)
 
     # 05: run-level distribution.
     fig, ax = plt.subplots(figsize=(8.8, 5.0))
